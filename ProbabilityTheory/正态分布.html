@@ -194,7 +194,7 @@
 <p>In ordinary probability theory courses, the course instructor would usually not emphasize the concepts and properties of the multivariate Gaussian distribution. However, multivariate Gaussian distribution is actually quite widely used in many different models. So here we are going to fill some holes in the probability theory we learned.</p>
 <h3 id="multivariate-gaussian-distribution">Multivariate Gaussian Distribution</h3>
 <p>If a random vector variable $x$ follows a multivariate Gaussian distribution with mean $\mu$ and covariance matrix $\Sigma$, its probability density function (pdf) is given by:</p>
-<p>$$p(x; \mu, \Sigma) = \frac{1}{(2\pi)^{n/2} |\Sigma|^{1/2}} \exp{(-\frac{1}{2}(x-\mu)^T \Sigma^{-1} (x-\mu))}$$</p>
+<p><script type="math/tex; ">p(x; \mu, \Sigma) = \frac{1}{(2\pi)^{n/2} |\Sigma|^{1/2}} \exp{(-\frac{1}{2}(x-\mu)^T \Sigma^{-1} (x-\mu))}</script></p>
 <p>We write this as $x \sim \mathcal{N}(\mu, \Sigma)$.</p>
 <p><br></p>
 <p>To understand the multivariate Gaussian distribution properly, we need to first understand the covariance matrix.</p>
@@ -212,9 +212,9 @@
 <p>We will first see covariance matrix is positive semi-definite.</p>
 <p><br></p>
 <p>By definition, given a random vector $x$, the covariance matrix is:</p>
-<p>$$\Sigma = E[(x-\mu)(x-\mu)^T]$$</p>
+<p><script type="math/tex; ">\Sigma = E[(x-\mu)(x-\mu)^T]</script></p>
 <p>For any vector $v$, we have:</p>
-<p>$$v^T \Sigma v = v^T E[(x-\mu)(x-\mu)^T] v = E[((x-\mu)^T v)^T ((x-\mu)^T v)] = E[((x-\mu)^T v)^2] \geq 0$$</p>
+<p><script type="math/tex; ">v^T \Sigma v = v^T E[(x-\mu)(x-\mu)^T] v = E[((x-\mu)^T v)^T ((x-\mu)^T v)] = E[((x-\mu)^T v)^2] \geq 0</script></p>
 <p>Therefore, covariance matrix is positive semi-definite.</p>
 <h4 id="covariance-matrix-in-multivariate-gaussian-distribution-is-positive-definite">Covariance matrix in multivariate Gaussian distribution is positive definite</h4>
 <p>Now we need to see why the covariance matrix in multivariate Gaussian distribution is positive definite.</p>
@@ -276,7 +276,7 @@
 <p>For any vector non-zero $y$, we could always express $y$ as $y = Kx$ because $K$ is invertible. Given $K$ is positive definite and $v^T K v &gt; 0$ for any non-zero vector $v$. </p>
 <p><br></p>
 <p>Then we have:</p>
-<p>$$y^T K^{-1} y = (Kx)^T K^{-1} Kx = x^T K^T (K^{-1} K) x = x^T K^T x = (x^T K x)^T &gt; 0$$</p>
+<p><script type="math/tex; ">y^T K^{-1} y = (Kx)^T K^{-1} Kx = x^T K^T (K^{-1} K) x = x^T K^T x = (x^T K x)^T > 0</script></p>
 <p>Therefore, $K^{-1}$ is also positive definite.</p>
 <h3 id="references">References</h3>
 <p>The references below provide a lot of useful properties and facts without showing some of the detailed self-contained subtle proofs I provided above.</p>
@@ -323,7 +323,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"正态分布","level":"1.2.2","depth":2,"previous":{"title":"首页","level":"1.2.1","depth":2,"path":"ProbabilityTheory/info.md","ref":"ProbabilityTheory/info.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"ProbabilityTheory/正态分布.md","mtime":"2020-12-29T08:36:48.911Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-12-29T08:37:16.671Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"正态分布","level":"1.2.2","depth":2,"previous":{"title":"首页","level":"1.2.1","depth":2,"path":"ProbabilityTheory/info.md","ref":"ProbabilityTheory/info.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["mathjax"],"pluginsConfig":{"mathjax":{"forceSVG":false,"version":"2.6-latest"},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"ProbabilityTheory/正态分布.md","mtime":"2020-12-29T08:37:19.742Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-12-29T08:57:16.199Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
@@ -331,6 +331,14 @@
         
     <script src="../gitbook/gitbook.js"></script>
     <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="https://cdn.mathjax.org/mathjax/2.6-latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-mathjax/plugin.js"></script>
+        
     
         
         <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
